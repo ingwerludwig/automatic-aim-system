@@ -1,0 +1,7 @@
+detector:
+  model_name: fasterrcnn
+  framework: torch
+
+tracker:
+  model_name: deepsort
+  framework: torch

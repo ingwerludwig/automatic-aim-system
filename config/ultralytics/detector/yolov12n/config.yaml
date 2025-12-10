@@ -1,0 +1,15 @@
+config:
+  model_init_name: /home/simslab/ingwer/MASTER/TugasIngwer/FinalICS/src/checkpoint/detector/yolo12n.pt
+  inference_cfg:
+    fp16: True
+    task: detect
+    verbose: True
+    fuse: True
+    device: cuda
+    conf: 0.3
+    iou: 0.5
+    imgsz: 480
+    max_det: 100
+    classes: [0]
+    # 0 is for person class only
+    # Check Ultralytics documentation related COCO format for another class detection

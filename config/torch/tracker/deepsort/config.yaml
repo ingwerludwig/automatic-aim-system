@@ -1,0 +1,23 @@
+config:
+  model_init_name: "deepsort"
+  inference_cfg:
+    # Core DeepSORT / deep-sort-realtime params
+    # Core DeepSORT / deep-sort-realtime params
+    # Make tracks harder to confirm and quicker to die if they disappear
+    max_age: 15            # was 30 → reduce lifetime of lost tracks
+    n_init: 5              # was 0 → require 5 consecutive detections to confirm
+
+    # Matching thresholds
+    max_iou_distance: 0.6  # was 0.8 → stricter spatial matching
+    max_cosine_distance: 0.25  # was 0.5 → stricter appearance matching
+    nms_max_overlap: 0.9   # slightly below 1.0 to reduce overlapping boxes
+
+    # Embedder & device
+    embedder: "clip_ViT-B/32"   # Choice of ['mobilenet', 'torchreid', 'clip_RN50', 'clip_RN101', 'clip_RN50x4', 'clip_RN50x16', 'clip_ViT-B/32', 'clip_ViT-B/16']
+    embedder_gpu: true          # use CUDA if available
+    half: false                  # half precision on GPU
+    bgr: true                   # because OpenCV frames are BGR
+
+    # Optional: keep for future tweaking
+    max_age_id: null
+    polygon: false

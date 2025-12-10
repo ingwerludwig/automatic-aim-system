@@ -1,0 +1,6 @@
+# PyTorch model files
+*.pth
+*.pt
+
+# Video files
+*.mp4

@@ -1,0 +1,7 @@
+detector:
+  model_name: yolov12n
+  framework: ultralytics
+
+tracker:
+  model_name: bytetracker
+  framework: ultralytics

@@ -1,0 +1,11 @@
+config:
+  model_init_name: "botsort"
+  inference_cfg:
+    track_buffer: 30
+    track_thresh: 0.5
+    track_high_thresh: 0.6
+    track_low_thresh: 0.1
+    new_track_thresh: 0.7
+    match_thresh: 0.8
+    fuse_score: True
+    mot20: False

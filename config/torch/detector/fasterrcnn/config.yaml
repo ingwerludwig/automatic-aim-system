@@ -1,0 +1,20 @@
+config:
+  model_init_name: fasterrcnn_resnet50_fpn
+  weights: null
+  weights_path: /home/simslab/ingwer/MASTER/TugasIngwer/FinalICS/src/checkpoint/detector/fasterrcnn_resnet50_fpn_coco.pth
+
+  inference_cfg:
+    device: cuda
+
+    # External filter used in det_to_tracker_torch
+    # (this is the important one for tracking)
+    score_threshold: 0.7      # stricter: keep only confident detections
+
+    # Let torchvision handle its own NMS / RPN defaults again
+    # Don't set box_nms_thresh / rpn_* unless you really need to.
+
+    # But still limit how many detections per frame we keep
+    box_detections_per_img: 5
+
+    # Only keep COCO "person" class (id=1)
+    person_only: true
