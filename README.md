@@ -1,5 +1,14 @@
 # Video Object Detection and Tracking Pipeline
 
+**Charlie Team** - Intelligent Control System Course Project
+
+## Authors
+- Ida Bagus Kade Rainata Putra - M11312806
+- Ingwer Ludwig Nommensen - M11302839
+- Tzu-Chien Joey Tseng - M11412009
+
+## Description
+
 A modular pipeline for real-time object detection and tracking in video streams. The system supports multiple detection backends (Ultralytics and Torchvision) and tracking algorithms (ByteTrack and DeepSORT), with flexible configuration and ZeroMQ-based stream processing.
 
 ## Table of Contents
